@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="test.css" />
+
+    <script src="comm.js"></script>
 </head>
-<body>
+<body id="theBody">
+    <script>
+
+    document.write("<br>","<br>","<br>","<br>");
+     
+    var addNum = 0;
+
+
+    //var auto_1 = setTimeout(function(){
+    var auto_1 = setInterval(function(){
+        addNum++;
+        console.log("addNum:", addNum);
+    }, 3000);
+
+    </script>
+
+<button onclick="clearInterval(auto_1)">증가정지</button>
+
+<p id="pcolor">CSS ID</p>
+<p class="start">CSS Class</p>
+
+<script>
+
+testFunc();
+
+var color = ["white", "yellow", "aqua", "purple"];
+
+var i = 0;
+
+function changeColor(){
+    i++;
     
+    if(i >= color.length){
+        i=0;
+    }
+
+    console.log(i);
+
+    var bodyTag = document.getElementById("theBody");
+
+    console.log(bodyTag);
+
+    bodyTag.style.backgroundColor = color[i];
+}
+
+function changeImg(){
+    var imgTag = document.getElementById("photo");
+    imgTag.setAttribute("src", "images/boxer.jpg");
+}
+
+</script>
+
+<div id="galleryZone">
+    <p><img src="" id="photo" alt=""></p>
+</div>
+
+<button onclick="changeImg();">사진변경</button>
+<button onclick="changeColor();">배경색변경</button>
+
+
+
 </body>
 </html>
