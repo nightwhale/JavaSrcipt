@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script src="js/jquery.js"></script>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <script src="js/jquery-ui/jquery-ui.js"></script>
+    <style>
+        .layer_popup{
+            position:absolute; left: 250px; top: 250px;
+            cursor:move;
+        }
+    </style>
+
+    <script>
+        $(function(){
+            //$(".layer_popup").draggable();
+            $("#draggable").draggable();
+            $("#datepicker").datepicker({
+                minDate:-1,
+                maxDate:"+1M"
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div id = "draggable" class = "layer_popup">
+        <img src="images/boxer_1.jpg" alt="">
+    </div>
+
+    <label for="startDate">날짜선택</label>
+    <p>Date : <input type="text" id="datepicker"></p>
+</body>
+</html>
